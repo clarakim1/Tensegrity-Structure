@@ -3,24 +3,24 @@
 # ==========================================
 
 # 기하학적 치수 (미터)
-TRIANGLE_SIDE = 1.0          # 삼각형 한 변 길이 (m)
-HEIGHT_BETWEEN = 0.8         # 상단/하단 삼각형 간 높이 (m)
-LIGHTNING_WIDTH = 0.5        # 번개 패널 폭 (m)
-LIGHTNING_HEIGHT = 0.3       # 번개 패널 높이 (m)
+TRIANGLE_SIDE = 0.12         # 삼각형 한 변 길이 (m) - 120mm
+HEIGHT_BETWEEN = 0.08        # 상단/하단 삼각형 간 높이 (m)
+LIGHTNING_WIDTH = 0.05       # 번개 패널 폭 (m)
+LIGHTNING_HEIGHT = 0.03      # 번개 패널 높이 (m)
 
 # 재료 특성
 # 목재 (소나무)
 WOOD_YOUNGS_MODULUS = 11e9   # Pa (11 GPa)
 WOOD_POISSON = 0.3
 WOOD_DENSITY = 500           # kg/m³
-WOOD_SECTION_WIDTH = 0.05    # m (50 mm)
-WOOD_SECTION_HEIGHT = 0.05   # m (50 mm)
+WOOD_SECTION_WIDTH = 0.01    # m (10 mm)
+WOOD_SECTION_HEIGHT = 0.01   # m (10 mm)
 WOOD_SECTION_AREA = WOOD_SECTION_WIDTH * WOOD_SECTION_HEIGHT
 
 # 스트링 (나일론 로프)
 STRING_YOUNGS_MODULUS = 5e9  # Pa (5 GPa, 나일론)
 STRING_POISSON = 0.3
-STRING_DIAMETER = 0.005      # m (5 mm)
+STRING_DIAMETER = 0.00175    # m (1.75 mm)
 STRING_SECTION_AREA = 3.14159 * (STRING_DIAMETER/2)**2
 
 # 강철 브라켓
