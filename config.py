@@ -27,6 +27,8 @@ STRING_SECTION_AREA = 3.14159 * (STRING_DIAMETER/2)**2
 STEEL_YOUNGS_MODULUS = 200e9 # Pa (200 GPa)
 STEEL_POISSON = 0.3
 STEEL_DENSITY = 7850         # kg/m³
+BRACKET_LENGTH = 0.02        # L자 브라켓 길이 (m) - 20mm
+BRACKET_OFFSET = 0.01        # 브라켓이 꼭지점에서 떨어진 거리
 
 # 하중 조건
 PHONE_MASS = 0.2             # kg (200g)
@@ -44,3 +46,11 @@ PLOT_FIGSIZE = (15, 12)
 STRESS_COLORMAP = 'RdYlBu_r'
 SHOW_DEFORMATION = True
 DEFORMATION_SCALE = 100      # 변위 확대 배수
+
+# ===== 구조 설명 =====
+# 상단 삼각형: 3개 꼭지점 (고정)
+# 하단 삼각형: 3개 꼭지점 (고정)
+# L자 브라켓 위: 상단 삼각형 한 꼭지점(Top2)에 연결
+# L자 브라켓 아래: 하단 삼각형 같은 위치(Bottom2)에 연결
+# 번개 패널: 중앙에 떠있음 (상단 브라켓 스트링 + 하단 브라켓 스트링으로 지탱)
+# 스트링 장력: 번개 패널 중심에 휴대폰 무게가 걸려 장력 생성
